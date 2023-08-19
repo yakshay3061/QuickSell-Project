@@ -1,10 +1,48 @@
 import React from "react";
 import "./StatusCard.css";
 import { BsFillExclamationSquareFill, BsFillCircleFill } from "react-icons/bs";
-import { yellow } from "@mui/material/colors";
 import { BiSolidColor } from "react-icons/bi";
+import {
+  PiCellSignalLowBold,
+  PiCellSignalHighBold,
+  PiCellSignalFullBold,
+} from "react-icons/pi";
 
-const StatusCard = ({ id, title, tag }) => {
+import {
+  AiFillStop,
+  AiOutlineCloseCircle,
+  AiFillCheckCircle,
+  AiOutlineDash,
+  AiOutlinePlus,
+  AiOutlineEllipsis,
+} from "react-icons/ai";
+
+const priorityIcon = [
+  <PiCellSignalLowBold
+    style={{  color: "#808080" , background: 'white', fontSize: "13.5px"}}
+  />,
+  <PiCellSignalHighBold
+    style={{ color: "#808080",  background: 'white',  fontSize: "13.5px"}}
+  />,
+  <PiCellSignalFullBold
+    style={{  color: "#808080", background: 'white',  fontSize: "13.5px"}}
+  />,
+  <BsFillExclamationSquareFill
+    style={{
+     
+      fontSize: "13.5px",
+      color: "#ff5722",
+      background: 'white',
+     
+
+    }}
+  />,
+  <AiOutlineDash
+    style={{ color: "#808080", background: 'white', fontSize: "13.5px" }}
+  />,
+];
+
+const StatusCard = ({ id, title, tag , priority}) => {
   return (
     <div className="status__card">
       <p className="statusCard__id">{id}</p>
@@ -13,7 +51,7 @@ const StatusCard = ({ id, title, tag }) => {
 
       <div className="statusCard__feature">
         <span style={{ fontSize: "13.5px" }}>
-          <BsFillExclamationSquareFill style={{ color: "#808080" }} />
+        {priorityIcon[priority]}
         </span>
 
         <span>

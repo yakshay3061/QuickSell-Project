@@ -15,6 +15,37 @@ import {
   AiOutlineEllipsis,
 } from "react-icons/ai";
 
+import {
+  PiCellSignalLowBold,
+  PiCellSignalHighBold,
+  PiCellSignalFullBold,
+} from "react-icons/pi";
+
+const priorityIcon = [
+  <PiCellSignalLowBold
+    style={{  color: "#808080" , background: 'white',  fontSize: "13.5px"}}
+  />,
+  <PiCellSignalHighBold
+    style={{ color: "#808080",  background: 'white',  fontSize: "13.5px"}}
+  />,
+  <PiCellSignalFullBold
+    style={{  color: "#808080", background: 'white',  fontSize: "13.5px"}}
+  />,
+  <BsFillExclamationSquareFill
+    style={{
+     
+      fontSize: "13.5px",
+      color: "#ff5722",
+      background: 'white',
+   
+
+    }}
+  />,
+  <AiOutlineDash
+    style={{  color: "#808080", background: 'white',  fontSize: "13.5px" }}
+  />,
+];
+
 const cardIcon = {
   Backlog: (
     <AiFillStop
@@ -46,7 +77,7 @@ const cardIcon = {
   ),
 };
 
-const UserCard = ({ id, title, tag, status }) => {
+const UserCard = ({ id, title, tag, status, priority }) => {
   return (
     <div className="status__card">
       <span
@@ -71,9 +102,9 @@ const UserCard = ({ id, title, tag, status }) => {
 
       <div className="statusCard__feature">
         <span style={{ fontSize: "13.5px" }}>
-          <AiOutlineEllipsis
-            style={{ color: "#808080", background: "white" }}
-          />
+         
+
+          {priorityIcon[priority]}
         </span>
 
         <span>

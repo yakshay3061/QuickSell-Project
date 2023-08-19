@@ -29,7 +29,7 @@ const User = () => {
     <div className="status">
       {users?.map((user) => {
         return (
-          <div className="backlog">
+          <div key={user.id} className="backlog">
             <div className="status__nav">
               <div>
                 <BsFillPersonFill
@@ -55,12 +55,12 @@ const User = () => {
             </div>
 
             {tickets?.map((ticket) => {
-              const { id, title, tag, status } = ticket;
+              const { id, title, tag, status, priority } = ticket;
 
               return (
                 <div key={ticket?.id}>
                   {ticket?.userId === user.id && (
-                    <UserCard id={id} title={title} tag={tag} status={status} />
+                    <UserCard id={id} title={title} tag={tag} status={status} priority = {priority} />
                   )}
                 </div>
               );

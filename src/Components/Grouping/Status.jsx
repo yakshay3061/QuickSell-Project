@@ -46,12 +46,12 @@ const Status = () => {
         </div>
 
         {tickets?.map((ticket) => {
-          const { id, title, tag } = ticket;
+          const { id, title, tag , priority} = ticket;
 
           return (
             <div key={ticket?.id}>
               {ticket?.status === "Backlog" && (
-                <StatusCard id={id} title={title} tag={tag} />
+                <StatusCard id={id} title={title} tag={tag} priority = {priority}/>
               )}
             </div>
           );
@@ -82,12 +82,12 @@ const Status = () => {
         </div>
 
         {tickets?.map((ticket) => {
-          const { id, title, tag } = ticket;
+          const { id, title, tag , priority} = ticket;
 
           return (
             <div key={ticket?.id}>
               {ticket?.status === "Todo" && (
-                <StatusCard id={id} title={title} tag={tag} />
+                <StatusCard id={id} title={title} tag={tag} priority = {priority} />
               )}
             </div>
           );
@@ -116,12 +116,12 @@ const Status = () => {
         </div>
 
         {tickets?.map((ticket) => {
-          const { id, title, tag } = ticket;
+          const { id, title, tag , priority} = ticket;
 
           return (
             <div key={ticket?.id}>
               {ticket?.status === "In progress" && (
-                <StatusCard id={id} title={title} tag={tag} />
+                <StatusCard id={id} title={title} tag={tag} priority = {priority}/>
               )}
             </div>
           );
@@ -147,12 +147,12 @@ const Status = () => {
         </div>
 
         {tickets?.map((ticket) => {
-          const { id, title, tag } = ticket;
+          const { id, title, tag , priority} = ticket;
 
           return (
             <div key={ticket?.id}>
               {ticket?.status === "Done" && (
-                <StatusCard id={id} title={title} tag={tag} />
+                <StatusCard id={id} title={title} tag={tag} priority = {priority} />
               )}
             </div>
           );
@@ -178,12 +178,12 @@ const Status = () => {
         </div>
 
         {tickets?.map((ticket) => {
-          const { id, title, tag } = ticket;
+          const { id, title, tag , priority} = ticket;
 
           return (
             <div key={ticket?.id}>
               {ticket?.status === "Canceled" && (
-                <StatusCard id={id} title={title} tag={tag} />
+                <StatusCard id={id} title={title} tag={tag} priority = {priority} />
               )}
             </div>
           );
