@@ -1,0 +1,52 @@
+.status__card{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0px 2px 2px 2px rgba(228, 224, 224, 0.4);
+    border-radius: 5px;
+}
+
+
+
+.statusCard__id{
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+    /* font-weight: 100; */
+    font-weight: 400;
+     color: #808080;
+}
+
+.statusCard__title{
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.statusCard__feature{
+    color:  #808080;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.statusCard__feature > span{
+    display: flex;
+    background-color: white;
+    border: 0.1px solid #D3D3D3;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 10px;
+    font-weight: 5px;
+    margin-left: 2px;
+    
+}
+
+.statusCard__feature > span > span{
+    margin-left: 3px;
+    background-color: white;
+}
