@@ -19,18 +19,18 @@ import {
 
 const priorityIcon = [
   <PiCellSignalLowBold
-    style={{  color: "#808080" , background: 'white', fontSize: "13.5px"}}
+    style={{  color: "#808080" , background: 'white', fontSize: "12.5px"}}
   />,
   <PiCellSignalHighBold
-    style={{ color: "#808080",  background: 'white',  fontSize: "13.5px"}}
+    style={{ color: "#808080",  background: 'white',  fontSize: "12.5px"}}
   />,
   <PiCellSignalFullBold
-    style={{  color: "#808080", background: 'white',  fontSize: "13.5px"}}
+    style={{  color: "#808080", background: 'white',  fontSize: "12.5px"}}
   />,
   <BsFillExclamationSquareFill
     style={{
      
-      fontSize: "13.5px",
+      fontSize: "12.5px",
       color: "#ff5722",
       background: 'white',
      
@@ -38,7 +38,7 @@ const priorityIcon = [
     }}
   />,
   <AiOutlineDash
-    style={{ color: "#808080", background: 'white', fontSize: "13.5px" }}
+    style={{ color: "#808080", background: 'white', fontSize: "12.5px" }}
   />,
 ];
 
@@ -50,7 +50,7 @@ const StatusCard = ({ id, title, tag , priority}) => {
       <p className="statusCard__title">{title}</p>
 
       <div className="statusCard__feature">
-        <span style={{ fontSize: "13.5px" }}>
+        <span >
         {priorityIcon[priority]}
         </span>
 
